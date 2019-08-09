@@ -11,6 +11,7 @@ set NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.1.2.Linux_CentOS5.9
 
 # Prepend WRF and WPS paths and dependencies to existing environment
 prepend-path  PATH $NCARG_ROOT/bin
+prepend-path  LD_LIBRARY_PATH /lib64/
 
 proc ModulesHelp { } {
         global version
