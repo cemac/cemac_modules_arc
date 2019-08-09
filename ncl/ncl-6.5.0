@@ -1,4 +1,6 @@
 #%Module ncl-6.5.0
+package require flavours
+flavours init
 
 # Load in existing modules (if required)
 
@@ -22,6 +24,13 @@ proc ModulesHelp { } {
 }
 
 module-whatis   "Loads an environment to enable users to run ncl 6.5.0"
+
+setenv NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+
+flavours conflict ncl
+flavours root /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+flavours revision 1
+flavours commit
 
 # for Tcl script use only
 # set     version 6.5.0
