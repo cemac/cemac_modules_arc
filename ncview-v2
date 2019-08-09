@@ -9,7 +9,7 @@ module load udunits/2.2.26
 # Set new environment variables here
 set version 2.1.7
 set app     ncview
-set NCVIEWROOT /home/home02/earwrfa/ncview-2.1.7
+set NCVIEWROOT /home/home02/earwrf/ncview-2.1.7
 
 # Prepend paths to existing environment
 prepend-path  PATH $NCVIEWROOT/bin
