@@ -1,13 +1,13 @@
-#%Module ncl-6.5.0
+#%Module ncl-6.1.2
 package require flavours
 flavours init
 
 # Load in existing modules (if required)
 
 # Set new environment variables here
-set version 6.5.0
+set version 6.1.2
 set app ncl
-set NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+set NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.1.2.Linux_CentOS5.9
 
 # Prepend WRF and WPS paths and dependencies to existing environment
 prepend-path  PATH $NCARG_ROOT/bin
@@ -17,16 +17,16 @@ proc ModulesHelp { } {
 
         puts stderr "   This module loads an environment for users to run a prebuilt ncl"
         puts stderr "                  ncl version 6.5.0                                "
-        puts stderr "   Stored at /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5"
+        puts stderr "   Stored at /home/home02/earwrf/ncl_ncarg-6.1.2.Linux_CentOS5.9"
         puts stderr "
         Version $version
 "
 }
 
-module-whatis   "Loads an environment to enable users to run ncl 6.5.0"
+module-whatis   "Loads an environment to enable users to run ncl 6.1.2"
 
-setenv NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+setenv NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.1.2.Linux_CentOS5.9
 
 flavours conflict ncl
-flavours root /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+flavours root /home/home02/earwrf/ncl_ncarg-6.1.2.Linux_CentOS5.9
 flavours cleanup
