@@ -1,0 +1,27 @@
+#%Module ncl-6.5.0
+
+# Load in existing modules (if required)
+
+# Set new environment variables here
+set version 6.5.0
+set app ncl
+set NCARG_ROOT /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5
+
+# Prepend WRF and WPS paths and dependencies to existing environment
+prepend-path  PATH $NCARG_ROOT/bin
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   This module loads an environment for users to run a prebuilt ncl"
+        puts stderr "                  ncl version 6.5.0                                "
+        puts stderr "   Stored at /home/home02/earwrf/ncl_ncarg-6.5.0-CentOS7.5"
+        puts stderr "
+        Version $version
+"
+}
+
+module-whatis   "Loads an environment to enable users to run ncl 6.5.0"
+
+# for Tcl script use only
+# set     version 6.5.0
