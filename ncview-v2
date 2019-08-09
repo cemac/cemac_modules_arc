@@ -1,15 +1,19 @@
-#%Module################################################
+#%Module ncview-2.0
+
 # Load in existing modules
+
 module load netcdf
-module load udunits/2.2.26 
+module load udunits/2.2.26
 
 
 # Set new environment variables here
 set version 2.1.7
 set app     ncview
-set NCVIEWROOT /home/home02/earhbu/
-module-whatis "netCDF view - netCDF file viewer "
-prepend-path PATH $NCVIEWROOT/bin
+set NCVIEWROOT /home/home02/earwrfa/ncview-2.1.7
+
+# Prepend paths to existing environment
+prepend-path  PATH $NCVIEWROOT/bin
+
 
 proc ModulesHelp { } {
     puts stderr "netCDF view - netCDF file viewer
@@ -23,3 +27,7 @@ License:
 }
 
 
+module-whatis "netCDF view - netCDF file viewer "
+
+# for Tcl script use only
+# set     version 2.1.7
