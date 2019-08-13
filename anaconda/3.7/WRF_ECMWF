@@ -1,0 +1,33 @@
+#%Module anaconda
+
+package require flavours
+flavours init
+
+#flavours prereq bit
+flavours conflict python
+
+# Load in existing modules (if required)
+
+# Set new environment variables here
+set version 3.0
+set ANACONDA_PATH /nobackup/earwrfa_software/anaconda3
+set CONDA_PATH /nobackup/earwrfa_software/anaconda3/etc/profile.d
+
+# Prepend conda and python path
+prepend-path PATH $ANACONDA_PATH/bin
+
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   This module loads an environment for users to run a pre determined conda environment"
+        puts stderr "                  list envs available by conda env list        "
+        puts stderr "     Stored at /nobackup/earwrfa_software/anaconda/envs                 "
+        puts stderr "
+        Version $version
+"
+}
+
+module-whatis   "Loads an environment to enable users to run "
+
+flavours cleanup
