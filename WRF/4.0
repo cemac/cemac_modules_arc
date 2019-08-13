@@ -13,16 +13,18 @@ module load hdf5/1.10.5
 set version 4.0
 set app WRF
 set WRF_ROOT /nobackup/earwrfa_software/WRFv4
-set NETCDF=$(nc-config --prefix)
-set WRF_CHEM=0
-set OMP_STACKSIZE=4G
-set OMP_NUM_THREADS=1
-set I_MPI_HYDRA_TOPOLIB=ipl
-set HDF5=/apps/developers/libraries/hdf5/1.8.21/1/intel-19.0.4-intelmpi-20
+set NETCDF $(nc-config --prefix)
+set WRF_CHEM 0
+set OMP_STACKSIZE 4G
+set OMP_NUM_THREADS 1
+set I_MPI_HYDRA_TOPOLIB ipl
+set HDF5 /apps/developers/libraries/hdf5/1.8.21/1/intel-19.0.4-intelmpi-20
 19.4.243
 
 # Prepend WRF and WPS paths and dependencies to existing environment
 prepend-path PATH $WRF_ROOT/main/
+prepend-path  LD_LIBRARY_PATH $NETCDF/lib
+prepend-path  LD_LIBRARY_PATH $HDF5/lib
 
 proc ModulesHelp { } {
         global version
