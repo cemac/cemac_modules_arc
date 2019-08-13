@@ -40,5 +40,10 @@ proc ModulesHelp { } {
 }
 
 module-whatis   "Loads an environment to enable users to run "
-
+setenv ulimit -s unlimited
+setenv ulimit -c unlimited
+setenv WRF_CHEM 0
+setenv OMP_STACKSIZE 4G
+setenv OMP_NUM_THREADS 1
+setenv I_MPI_HYDRA_TOPOLIB ipl
 flavours cleanup
