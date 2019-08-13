@@ -3,6 +3,9 @@
 package require flavours
 flavours init
 
+flavours conflict WRFCHEM
+flavours conflict openmpi
+
 # Load in existing modules (if required)
 module load intelmpi/2019.4.243
 module load netcdf/4.6.3
@@ -38,6 +41,4 @@ proc ModulesHelp { } {
 
 module-whatis   "Loads an environment to enable users to run "
 
-flavours conflict WRFCHEM
-flavours conflict openmpi
 flavours cleanup
