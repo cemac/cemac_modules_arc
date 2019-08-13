@@ -3,11 +3,12 @@
 package require flavours
 flavours init
 
+#flavours prereq bit
 flavours conflict WRFCHEM
 flavours conflict openmpi
 
 # Load in existing modules (if required)
-module load intel/19.0.4
+flavours prereq intel/19.0.4
 module load intelmpi/2019.4.243
 module load netcdf/4.6.3
 module load hdf5/1.10.5
