@@ -39,4 +39,5 @@ proc ModulesHelp { } {
 module-whatis   "Loads an environment to enable users to run "
 
 flavours conflict WRFCHEM
-flavours conflict WRF/intel/4.0
+flavours conflict openmpi
+flavours cleanup
